@@ -48,3 +48,5 @@ gem 'redcarpet', '~> 2.1.1'
 gem 'nokogiri'
 # gem to manage pictures
 gem 'paperclip'
+# cross resource AJAX
+gem 'rack-cors', :require => 'rack/cors'
