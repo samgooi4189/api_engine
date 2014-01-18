@@ -5,11 +5,19 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
+	respond_to  do |format|
+		format.html
+		format.json {render json: @posts}
+	end
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
+	respond_to do |format| 
+		format.html
+		format.json {render json: @post[:id]}
+	end
   end
 
   # GET /posts/new
